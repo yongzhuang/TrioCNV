@@ -51,15 +51,25 @@ This command is to jointly call CNVs from a parent-offspring trio.
 usage: java -jar TrioCNV.jar call [OPTIONS] 
 
 -I,--input      <FILE>  read count file got by the preprocess step (required)
+
 -P,--pedigree   <FILE>  pedigree file (required)
+
 -M,--mappability        <FILE>  mappability file (required)
+
 -O,--output     <FILE>  output structural variation file (required)
+
    --min_mappability    <FLOAT> minumum mappability(optional, default 0)
+   
    --mutation_rate      <FLOAT> de novo mutation rate (optional, default 0.0001)
+   
    --transition_prob    <FLOAT> probability of transition between two different copy number states(optional, default 0.00001)
+   
    --outlier	<FLOAT>	the predefined percentage of outliers (optional, default 0.025)
+   
    --min_distance       <INT>   minumum distance to merge two adjacent CNVs (optional, default 10K)
+   
    --nt <INT>   number of threads (optional, default 1)
+   
    --gc_bin_size	<INT>	size of gc bin by percent (optional, default 1)
 
 #File Instruction
@@ -70,8 +80,10 @@ Column 1: path of .bam file
 
 Example: 
 
-/path/Sample1.bam 
-/path/Sample2.bam 
+/path/Sample1.bam
+
+/path/Sample2.bam
+
 /path/Sample3.bam
 ...
 
