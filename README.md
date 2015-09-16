@@ -18,7 +18,7 @@ If you want to run TrioCNV, you'll need:
 	
 	cd TrioCNV/
 	
-	mvn compile package
+	mvn clean install -Dmaven.compiler.source=1.7 -Dmaven.compiler.target=1.7
 
 #Running 
 
