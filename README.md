@@ -26,72 +26,72 @@ usage: java -jar TrioCNV.jar <COMMAND> [OPTIONS]
 
 1. preprocess 
 
-This command is to extract the information from the BAM file. 
+	This command is to extract the information from the BAM file. 
 
-	usage: java -jar TrioCNV.jar preprocess [OPTIONS] 
+		usage: java -jar TrioCNV.jar preprocess [OPTIONS] 
 
-	-R,--reference  <FILE>  reference genome file (required)
+		-R,--reference  <FILE>  reference genome file (required)
 
-	-B,--bams       <FILE>  bam list file (required)
+		-B,--bams       <FILE>  bam list file (required)
 
-	-P,--pedigree   <FILE>  pedigree file (required)
+		-P,--pedigree   <FILE>  pedigree file (required)
 
-	-M,--mappability        <FILE>  mappability file (required)
+		-M,--mappability        <FILE>  mappability file (required)
 
-	-O,--output     <FILE>  perfix of output file (required)
+		-O,--output     <FILE>  perfix of output file (required)
 
-	   --window     <INT>   window size (optional, default 200)
-	   
-	   --min_mapping_quality        <INT>   minumum mapping quality (optional,default 0)
+		   --window     <INT>   window size (optional, default 200)
+		   
+		   --min_mapping_quality        <INT>   minumum mapping quality (optional,default 0)
 
 2. call 
 
-This command is to jointly call CNVs from a parent-offspring trio.
+	This command is to jointly call CNVs from a parent-offspring trio.
 
-	usage: java -jar TrioCNV.jar call [OPTIONS] 
+		usage: java -jar TrioCNV.jar call [OPTIONS] 
 
-	-I,--input      <FILE>  read count file got by the preprocess step (required)
+		-I,--input      <FILE>  read count file got by the preprocess step (required)
 
-	-P,--pedigree   <FILE>  pedigree file (required)
+		-P,--pedigree   <FILE>  pedigree file (required)
 
-	-M,--mappability        <FILE>  mappability file (required)
+		-M,--mappability        <FILE>  mappability file (required)
 
-	-O,--output     <FILE>  output structural variation file (required)
+		-O,--output     <FILE>  output structural variation file (required)
 
-	   --min_mappability    <FLOAT> minumum mappability(optional, default 0)
-	   
-	   --mutation_rate      <FLOAT> de novo mutation rate (optional, default 0.0001)
-	   
-	   --transition_prob    <FLOAT> probability of transition between two different copy number states(optional, default 0.00001)
-	   
-	   --outlier	<FLOAT>	the predefined percentage of outliers (optional, default 0.025)
-	   
-	   --min_distance       <INT>   minumum distance to merge two adjacent CNVs (optional, default 10K)
-	   
-	   --nt <INT>   number of threads (optional, default 1)
-	   
-	   --gc_bin_size	<INT>	size of gc bin by percent (optional, default 1)
+		   --min_mappability    <FLOAT> minumum mappability(optional, default 0)
+		   
+		   --mutation_rate      <FLOAT> de novo mutation rate (optional, default 0.0001)
+		   
+		   --transition_prob    <FLOAT> probability of transition between two different copy number states(optional, default 0.00001)
+		   
+		   --outlier	<FLOAT>	the predefined percentage of outliers (optional, default 0.025)
+		   
+		   --min_distance       <INT>   minumum distance to merge two adjacent CNVs (optional, default 10K)
+		   
+		   --nt <INT>   number of threads (optional, default 1)
+		   
+		   --gc_bin_size	<INT>	size of gc bin by percent (optional, default 1)
 
 #File Instruction
 
 1. bam list file (one columns) 
 
-Column 1: path of .bam file
+	Column 1: path of .bam file
 
-Example: 
+	Example: 
 
-	/path/Sample1.bam
+		/path/Sample1.bam
 
-	/path/Sample2.bam
+		/path/Sample2.bam
 
-	/path/Sample3.bam
-	...
+		/path/Sample3.bam
+		...
 
-2) pedigree file
+2. pedigree file
 
-See (http://pngu.mgh.harvard.edu/~purcell/plink/data.shtml)
+	See (http://pngu.mgh.harvard.edu/~purcell/plink/data.shtml)
 
-Note: The Individual ID must be same as the @RG SM tag of the bam file.
+	Note: The Individual ID must be same as the @RG SM tag of the bam file.
 
 
 #Contact
