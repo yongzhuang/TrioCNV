@@ -31,11 +31,17 @@ This command is to extract the information from the BAM file.
 usage: java -jar TrioCNV.jar preprocess [OPTIONS] 
 
 -R,--reference  <FILE>  reference genome file (required)
+
 -B,--bams       <FILE>  bam list file (required)
+
 -P,--pedigree   <FILE>  pedigree file (required)
+
 -M,--mappability        <FILE>  mappability file (required)
+
 -O,--output     <FILE>  perfix of output file (required)
+
    --window     <INT>   window size (optional, default 200)
+   
    --min_mapping_quality        <INT>   minumum mapping quality (optional,default 0)
 
 2) call 
