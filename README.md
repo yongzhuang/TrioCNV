@@ -5,14 +5,20 @@ TrioCNV is a tool designed to jointly detecting CNVs from WGS data in parent-off
 If you want to run TrioCNV, you'll need:
 
 1) Java 1.7+
-2) Apache Maven (if you want to build the source) 
+
+2) Apache Maven (if you want to build the source)
+
 3) R (Rscript exectuable must be set in the PATH environment variable)
+
 4) Runiversal package(http://cran.rproject.org/web/packages/Runiversal/index.html) in R environment
+
 5) The easiest way to get TrioCNV is to download the binary distribution from the TrioCNV github release page. Alternatively, you can build TrioCNV from source with Maven. 
 
-git clone --recursive https://github.com/yongzhuang/TrioCNV.git
-cd TrioCNV/
-mvn compile package
+   git clone --recursive https://github.com/yongzhuang/TrioCNV.git
+   
+   cd TrioCNV/
+   
+   mvn compile package
 
 #Running 
 
