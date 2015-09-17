@@ -209,6 +209,7 @@ public class TrioCall {
             int lastEnd = 0;
             String line = bufferedReader.readLine();
             String[] sampleNames=line.split("\t");
+            samples=new String[3];
             samples[0]=sampleNames[3];
             samples[1]=sampleNames[4];
             samples[2]=sampleNames[5];
